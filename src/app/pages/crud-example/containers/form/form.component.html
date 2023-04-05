@@ -1,0 +1,35 @@
+<section class="container">
+  <section class="container__header">
+    <h2>Crud de unicornio</h2>
+    <section class="container__header__buttons">
+      <button mat-raised-button color="primary" (click)="goList()">
+        Volver
+      </button>
+      <button mat-raised-button color="primary" (click)="onSubmit()">
+        Guardar
+      </button>
+    </section>
+  </section>
+  <section class="container__form">
+    <form [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" formControlName="name" />
+        <mat-error *ngIf="nameField?.touched && nameField?.errors?.['required']"
+          >Es requerido</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Edad</mat-label>
+        <input matInput type="number" formControlName="age" />
+        <mat-error *ngIf="ageField?.touched && ageField?.errors?.['required']"
+          >Es requerido</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Color</mat-label>
+        <input matInput type="text" formControlName="colour" />
+      </mat-form-field>
+    </form>
+  </section>
+</section>
