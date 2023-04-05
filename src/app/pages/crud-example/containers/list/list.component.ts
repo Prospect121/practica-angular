@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { EMPTY, Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { CrudExampleService } from 'src/app/shared/crud-example/crud-example.service';
 import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
 import { IUnicorns } from 'src/app/shared/model/unicorns';
